@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html style="text-align:center">
+
+    <div id="add"></div>
+    <button onclick="save()">Save</button>
+    <script>
+        var d=document.getElementById("add");
+        for(var i=0;i<504;i++){
+            var curr=document.createElement('input');
+            curr.id=i;
+            curr.value=localStorage.getItem(i);
+            
+            d.appendChild(curr);
+        }
+        function save(){
+            for(var i=0;i<504;i++){
+            
+            localStorage.setItem(i.toString(),document.getElementById(i).textContent);
+        }
+        }
+    </script>
+</html>
